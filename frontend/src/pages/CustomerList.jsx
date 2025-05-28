@@ -12,7 +12,7 @@ function CustomerList() {
 
   const fetchCustomers = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/customers');
+      const res = await axios.get('https://salaammicrofincust.onrender.com/api/customers');
       setCustomers(res.data);
     } catch (error) {
       console.error("Error fetching customers:", error);
@@ -24,7 +24,7 @@ function CustomerList() {
   if (!confirmDelete) return;
 
   try {
-    await axios.delete(`http://localhost:5000/api/customers/${id}`);
+    await axios.delete(`https://salaammicrofincust.onrender.com/api/customers/${id}`);
     alert("Customer deleted successfully.");
     fetchCustomers(); // Refresh list
   } catch (error) {

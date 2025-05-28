@@ -16,7 +16,7 @@ function EditCustomer() {
   useEffect(() => {
     const fetchCustomer = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/customers/${id}`);
+        const res = await axios.get(`https://salaammicrofincust.onrender.com/api/customers/${id}`);
         setForm({
           name: res.data.name || '',
           email: res.data.email || '',
@@ -38,7 +38,7 @@ function EditCustomer() {
   const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    await axios.put(`http://localhost:5000/api/customers/${id}`, form);
+    await axios.put(`https://salaammicrofincust.onrender.com/api/customers/${id}`, form);
     navigate('/');
   } catch (error) {
     console.error("Error updating customer:", error);

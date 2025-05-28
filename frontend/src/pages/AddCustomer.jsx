@@ -20,7 +20,7 @@ function AddCustomer() {
     e.preventDefault();
 
     try {
-      await axios.post('http://localhost:5000/api/customers', form);
+      await axios.post('https://salaammicrofincust.onrender.com/api/customers', form);
       navigate('/');
     } catch (error) {
       console.error("Error adding customer:", error);

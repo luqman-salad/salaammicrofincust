@@ -8,6 +8,8 @@ const {
   deleteCustomer,
 } = require("../controllers/customerControllers");
 
+
+
 router.get("/", getAllCustomers);
 router.post("/", createCustomer);
 router.get("/:id", getCustomerById); // <== Add this route

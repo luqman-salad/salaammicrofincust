@@ -35,8 +35,8 @@ function CustomerList() {
 
 
   return (
-    <div className="p-8 bg-gray-100 min-h-screen">
-      <div className="max-w-5xl mx-auto bg-white shadow-md p-6 rounded-lg overflow-x-auto">
+    <div className="p-4 bg-gray-100 min-h-screen">
+      <div className="sm:max-w-5xl mx-auto bg-white shadow p-3 rounded overflow-x-auto">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-2xl font-bold">Customers</h1>
           <button
@@ -47,9 +47,9 @@ function CustomerList() {
           </button>
         </div>
 
-        <table className="min-w-full table-auto border-collapse table-auto">
+        <table className="min-w-full border-collapse table-auto">
           <thead>
-            <tr className="bg-gray-200 text-left">
+            <tr className="bg-green-100 text-left">
               <th className="px-4 py-2">Name</th>
               <th className="px-4 py-2">Email</th>
               <th className="px-4 py-2">Phone</th>
@@ -67,7 +67,7 @@ function CustomerList() {
             )}
 
             {customers? customers.map((customer) => (
-              <tr key={customer.id} className="border-b hover:bg-gray-50">
+              <tr key={customer.id} className="border-b border-green-600 hover:bg-green-50">
                 <td className="px-4 py-2">{customer.name}</td>
                 <td className="px-4 py-2">{customer.email}</td>
                 <td className="px-4 py-2">{customer.phone}</td>
@@ -75,13 +75,13 @@ function CustomerList() {
                 <td className="px-4 py-2 space-x-2">
                   <button
                     onClick={() => navigate(`/customers/${customer.id}`)}
-                    className="text-blue-600 hover:underline"
+                    className="text-white bg-green-700 px-2 py-1 rounded cursor-pointer"
                   >
                     Edit
                   </button>
                   <button
                     onClick={() => handleDelete(customer.id)}
-                    className="text-red-600 hover:underline"
+                    className="text-white bg-red-700 px-2 py-1 rounded cursor-pointer"
                   >
                     Delete
                   </button>
